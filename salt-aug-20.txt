@@ -1,0 +1,116 @@
+Salt Stack PART -1
+=================
+
+Open Source
+
+Configuration Management Tool
+
+Master & Slave Method
+
+8+
+
+Ansible(AgentLess) Chef Puppet Salt(AgentBase)
+=====================
+
+AgentBase - CM will be installed in both Master & Slave
+AgentLess - CM tool will be installed only in Master 
+================================
+Bootstrap
+https://bootstrap.saltproject.io/
+
+Repo
+https://repo.saltproject.io/
+==============================
+
+
+Step1-  TO install 4 Servers AmazonLinux, Ubuntu, Windows & RedHat
+Step2 - Master - Master's Configuration
+Step3 - Slave - Slave's Configuration
+Step4 - Slave - Master's Info
+Step5 - Master - Slave authentication
+
+===============================
+Step1-  TO install 4 Servers AmazonLinux, Ubuntu, Windows & RedHat
+
+Install Instances with All TCP Enabled
+=============================
+Step2 - Master - Master's Configuration
+
+curl -L https://bootstrap.saltproject.io/ -o install_salt.sh
+sh install_salt.sh -P -M
+service salt-master status
+=======================================
+
+Step3 - Slave - Slave's Configuration
+
+curl -L https://bootstrap.saltproject.io/ -o install_salt.sh
+sh install_salt.sh -P 
+service salt-minion status
+============================
+/etc/salt
+
+Step4 - Slave - Master's Info
+
+vi /etc/salt/minion
+#master: salt => master: <master's hostname>
+service salt-minion restart
+===============================
+
+Step5 - Master - Slave authentication
+
+salt-key
+salt-key -A
+salt-key
+=============================
+
+ sudo salt '*' test.ping
+
+
+
+GIT
+Jenkins
+Docker
+Ansible
+Salt-Stack
+Terrafrom
+Prometheus & Grafana
+Splunk
+--------------------
+
+Maven
+SQ
+Nexus
+====================
+GOLANG
+
+
+EC2
+S3
+VPC
+RDS
+R53
+IAM
+SNS SQS
+
+Lambda
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
